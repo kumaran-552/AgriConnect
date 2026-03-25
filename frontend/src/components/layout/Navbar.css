@@ -1,0 +1,144 @@
+.navbar {
+  background-color: var(--white);
+  color: var(--dark-text);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px var(--shadow);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.nav-logo:hover {
+  color: var(--secondary-green);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  color: var(--gray-text);
+  text-decoration: none;
+  padding: 0.625rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: var(--cream);
+  color: var(--primary-green);
+}
+
+.register-btn {
+  background-color: var(--primary-green);
+  color: var(--white);
+  margin-left: 0.5rem;
+}
+
+.register-btn:hover {
+  background-color: var(--secondary-green);
+  transform: translateY(-1px);
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: var(--white);
+  margin-left: 0.5rem;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--primary-green);
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 968px) {
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 72px;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+    transition: left 0.3s ease;
+    box-shadow: 0 10px 27px var(--shadow);
+    padding: 2rem 0;
+    gap: 0.5rem;
+    border-top: 1px solid var(--light-gray);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

@@ -1,0 +1,311 @@
+.experts-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e6eef5 100%);
+  padding: 2rem 0;
+}
+
+.experts-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.experts-header h1 {
+  color: #2c5282;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experts-header p {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.search-bar {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.expert-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.expert-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.expert-tab:hover {
+  border-color: #4299e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.expert-tab.active {
+  background: #4299e1;
+  border-color: #4299e1;
+  color: white;
+}
+
+.expert-icon {
+  font-size: 2rem;
+}
+
+.expert-category-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.expert-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.expert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.expert-avatar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.expert-info {
+  padding: 1.5rem;
+}
+
+.expert-name {
+  color: #2c5282;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.expert-specialization {
+  color: #4299e1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.expert-qualification,
+.expert-experience,
+.expert-rating,
+.expert-languages {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.expert-rating {
+  color: #f39c12;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.expert-expertise {
+  margin: 1rem 0;
+}
+
+.expert-expertise h4 {
+  color: #2c5282;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.expertise-tag {
+  background: #e6f2ff;
+  color: #2c5282;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.expert-details {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.detail-icon {
+  font-size: 1.1rem;
+}
+
+.detail-item.fee {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.fee-amount {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.consult-btn {
+  width: 100%;
+  background: #4299e1;
+  color: white;
+  border: none;
+  padding: 0.875rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.consult-btn:hover {
+  background: #3182ce;
+  transform: scale(1.02);
+}
+
+.no-experts {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #7f8c8d;
+  font-size: 1.2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .experts-page {
+    padding: 1rem 0;
+  }
+  
+  .experts-header h1 {
+    font-size: 2rem;
+  }
+  
+  .experts-header p {
+    font-size: 1rem;
+  }
+  
+  .expert-category-tabs {
+    gap: 0.5rem;
+  }
+  
+  .expert-tab {
+    min-width: 110px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .expert-icon {
+    font-size: 1.5rem;
+  }
+  
+  .expert-category-name {
+    font-size: 0.8rem;
+  }
+  
+  .experts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .expert-avatar {
+    height: 120px;
+    font-size: 4rem;
+  }
+  
+  .expert-info {
+    padding: 1rem;
+  }
+  
+  .expert-name {
+    font-size: 1.3rem;
+  }
+  
+  .expert-specialization {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .expert-category-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+  }
+  
+  .expert-tab {
+    min-width: auto;
+  }
+  
+  .expertise-tags {
+    gap: 0.3rem;
+  }
+  
+  .expertise-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

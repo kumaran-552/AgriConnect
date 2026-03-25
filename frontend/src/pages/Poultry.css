@@ -1,0 +1,614 @@
+.poultry-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.poultry-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(248, 249, 250, 0.65);
+  z-index: 0;
+}
+
+.poultry-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.poultry-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.poultry-header h1 {
+  color: black;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.poultry-definition {
+  color: black;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.poultry-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.tab-button:hover {
+  border-color: #d2691e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button.active {
+  background: #d2691e;
+  border-color: #d2691e;
+  color: white;
+}
+
+.tab-icon {
+  font-size: 2rem;
+}
+
+.tab-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.bird-content {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.bird-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.bird-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bird-icon-large {
+  font-size: 4rem;
+}
+
+.bird-title h2 {
+  color: #8b4513;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.bird-description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bird-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.detail-card {
+  background: #fefbf8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #d2691e;
+}
+
+.detail-card h3 {
+  color: #8b4513;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.detail-card p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.detail-card ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.detail-card li {
+  color: #555;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.breeds-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.breed-tag {
+  background: #f4e4bc;
+  color: #8b4513;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.poultry-footer {
+  margin-top: 3rem;
+}
+
+.info-banner {
+  background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.info-banner h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.info-banner p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .poultry-page {
+    padding: 1rem 0;
+  }
+  
+  .poultry-header h1 {
+    font-size: 2rem;
+  }
+  
+  .poultry-definition {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .poultry-tabs {
+    gap: 0.5rem;
+  }
+  
+  .tab-button {
+    min-width: 100px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .tab-icon {
+    font-size: 1.5rem;
+  }
+  
+  .tab-name {
+    font-size: 0.8rem;
+  }
+  
+  .bird-content {
+    padding: 1.5rem;
+    margin: 0 1rem 2rem 1rem;
+  }
+  
+  .bird-title {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .bird-icon-large {
+    font-size: 3rem;
+  }
+  
+  .bird-title h2 {
+    font-size: 2rem;
+  }
+  
+  .bird-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .detail-card {
+    padding: 1rem;
+  }
+  
+  .breeds-grid {
+    gap: 0.3rem;
+  }
+  
+  .breed-tag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .info-banner {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+  
+  .get-order-content {
+    margin: 0 1rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .main-tab-button {
+    min-width: 140px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .main-tab-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .poultry-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+  }
+  
+  .tab-button {
+    min-width: auto;
+  }
+  
+  .bird-details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .poultry-main-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .main-tab-button {
+    width: 100%;
+  }
+}
+
+/* Get Order Styles */
+.poultry-main-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.main-tab-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.main-tab-button:hover {
+  border-color: #d2691e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-tab-button.active {
+  background: #d2691e;
+  border-color: #d2691e;
+  color: white;
+}
+
+.main-tab-icon {
+  font-size: 1.8rem;
+}
+
+.main-tab-name {
+  font-weight: 600;
+}
+
+.get-order-content {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.get-order-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.get-order-header h2 {
+  color: #8b4513;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.get-order-description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.success-message {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: slideDown 0.5s ease;
+}
+
+.success-icon {
+  font-size: 2rem;
+}
+
+.success-message p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.get-order-form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: #fefbf8;
+  border-radius: 10px;
+  border-left: 4px solid #d2691e;
+}
+
+.form-section h3 {
+  color: #8b4513;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d2691e;
+  box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.1);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #dc3545;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.file-input-wrapper {
+  position: relative;
+}
+
+.file-input-wrapper input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border: 2px dashed #d2691e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-label:hover {
+  background: #fef9f5;
+  border-color: #8b4513;
+}
+
+.file-icon {
+  font-size: 1.5rem;
+}
+
+.file-label span:last-child {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.file-hint {
+  display: block;
+  color: #999;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.error-message {
+  display: block;
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.submit-button,
+.reset-button {
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+  color: white;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
+}
+
+.reset-button {
+  background: white;
+  color: #8b4513;
+  border: 2px solid #d2691e;
+}
+
+.reset-button:hover {
+  background: #fef9f5;
+  transform: translateY(-2px);
+}
+
+.order-info-banner {
+  background: #fff8f0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #ffc107;
+  margin-top: 2rem;
+}
+
+.order-info-banner h3 {
+  color: #8b4513;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.order-info-banner ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.order-info-banner li {
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}

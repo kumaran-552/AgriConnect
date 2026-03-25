@@ -1,0 +1,275 @@
+.horticulture-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
+  padding: 2rem 0;
+}
+
+.horticulture-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.horticulture-header h1 {
+  color: #1b4332;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.horticulture-definition {
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.horticulture-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.tab-button:hover {
+  border-color: #52b788;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button.active {
+  background: #52b788;
+  border-color: #52b788;
+  color: white;
+}
+
+.tab-icon {
+  font-size: 2rem;
+}
+
+.tab-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.category-content {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.category-icon-large {
+  font-size: 4rem;
+}
+
+.category-title h2 {
+  color: #1b4332;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.category-description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.category-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.detail-card {
+  background: #f8fdf8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #52b788;
+}
+
+.detail-card h3 {
+  color: #1b4332;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.detail-card p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.detail-card ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.detail-card li {
+  color: #555;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.examples-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.example-tag {
+  background: #d1e7dd;
+  color: #1b4332;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.horticulture-footer {
+  margin-top: 3rem;
+}
+
+.info-banner {
+  background: linear-gradient(135deg, #1b4332 0%, #52b788 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.info-banner h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.info-banner p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .horticulture-page {
+    padding: 1rem 0;
+  }
+  
+  .horticulture-header h1 {
+    font-size: 2rem;
+  }
+  
+  .horticulture-definition {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .horticulture-tabs {
+    gap: 0.5rem;
+  }
+  
+  .tab-button {
+    min-width: 100px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .tab-icon {
+    font-size: 1.5rem;
+  }
+  
+  .tab-name {
+    font-size: 0.8rem;
+  }
+  
+  .category-content {
+    padding: 1.5rem;
+    margin: 0 1rem 2rem 1rem;
+  }
+  
+  .category-title {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .category-icon-large {
+    font-size: 3rem;
+  }
+  
+  .category-title h2 {
+    font-size: 2rem;
+  }
+  
+  .category-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .detail-card {
+    padding: 1rem;
+  }
+  
+  .examples-grid {
+    gap: 0.3rem;
+  }
+  
+  .example-tag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .info-banner {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .horticulture-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+  }
+  
+  .tab-button {
+    min-width: auto;
+  }
+  
+  .category-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
